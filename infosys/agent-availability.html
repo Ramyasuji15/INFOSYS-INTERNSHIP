@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Availability</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <h1>Agent Availability</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li> <!-- Link to the main page -->
+          <li><a href="registration.html">Register</a></li> <!-- Link to Registration page -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="agentList">
+    <!-- Agent Cards -->
+    <div class="agent-card">
+      <span class="agent-name">Samhitha</span>
+      <span class="agent-status unavailable">Unavailable</span>
+      <button onclick="checkAvailability('Pavithra', false)">Notify Me</button>
+      <button onclick="cancelBooking('Samhitha')">Cancel Booking</button> <!-- Cancel button -->
+    </div>
+
+    <div class="agent-card">
+      <span class="agent-name">Keerthi</span>
+      <span class="agent-status available">Available</span>
+      <button onclick="checkAvailability('Rajesh', true, '123-456-7890')">Contact Agent</button>
+      <button onclick="cancelBooking('Keerthi')">Cancel Booking</button> <!-- Cancel button -->
+    </div>
+
+    <div class="agent-card">
+      <span class="agent-name">Aditya</span>
+      <span class="agent-status unavailable">Unavailable</span>
+      <button onclick="checkAvailability('Kokhila', false)">Notify Me</button>
+      <button onclick="cancelBooking('Aditya')">Cancel Booking</button> <!-- Cancel button -->
+    </div>
+
+    <div class="agent-card">
+      <span class="agent-name">Vikas</span>
+      <span class="agent-status available">Available</span>
+      <button onclick="checkAvailability('Adhithya', true, '987-654-3210')">Contact Agent</button>
+      <button onclick="cancelBooking('Vikas')">Cancel Booking</button> <!-- Cancel button -->
+    </div>
+
+    <div class="agent-card">
+      <span class="agent-name">Ramya</span>
+      <span class="agent-status unavailable">Unavailable</span>
+      <button onclick="checkAvailability('Kokhila', false)">Notify Me</button>
+      <button onclick="cancelBooking('Ramya')">Cancel Booking</button> <!-- Cancel button -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Cancel booking function
+    function cancelBooking(agentName) {
+      alert('Booking with ' + agentName + ' has been cancelled.');
+      
+      // Optionally, change the agent's status to unavailable after cancellation
+      const agentCards = document.querySelectorAll('.agent-card');
+      agentCards.forEach(card => {
+        if (card.querySelector('.agent-name').textContent === agentName) {
+          card.querySelector('.agent-status').textContent = 'Unavailable';
+          card.querySelector('.agent-status').classList.remove('available');
+          card.querySelector('.agent-status').classList.add('unavailable');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

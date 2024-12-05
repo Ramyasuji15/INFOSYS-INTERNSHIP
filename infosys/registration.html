@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration - Online Insurance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ONLINE INSURANCE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="#">Manager</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+                <li><a href="contact-agent.html">Contact</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Customer Registration</h2>
+            <form>
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Policy Name" required>
+                <input type="number" placeholder="Age" required>
+                <input type="text" placeholder="Payment type: Check/Cash/Card" required>
+                <input type="password" id="createPassword" placeholder="Create Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <textarea placeholder="Address for Contact" rows="4" required></textarea>
+                <button type="submit">Register</button>
+            </form>
+            <p class="switch-auth">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>
+                Hebal<br>
+                1800.30.2000<br>
+                info@OnlineInsurance.com
+            </p>
+            <div class="social-media">
+            
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Modal -->
+       <div id="successModal" class="modal">
+        <div class="modal-content">
+         <span class="close-button">&times;</span>
+         <h2>Success</h2>
+         <p>Registred Successful!</p>
+     </div>
+ </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

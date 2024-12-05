@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login - Online Insurance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ONLINE INSURANCE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="#">Manager</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+                <li><a href="contact-agent.html">Contact</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="registration.html">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Customer Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="switch-auth">Don't have an account? <a href="registration.html">Register here</a></p>
+        </div>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>
+                Hebal<br>
+                1800.30.2000<br>
+                info@OnlineInsurance.com
+            </p>
+            <div class="social-media">
+
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Modal -->
+       <div id="successModal" class="modal">
+       <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Success</h2>
+        <p>Login Successful!</p>
+    </div>
+</div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
